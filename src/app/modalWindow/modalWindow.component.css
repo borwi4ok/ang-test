@@ -1,0 +1,57 @@
+.modal-window-pos {
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: grid;
+}
+
+.modal-window {
+  display: grid;
+  margin: auto;
+  width: 90%;
+  height: 40%;
+  grid-template-rows: 15% auto 25%;
+  padding: 10px;
+  background-color: #ccc;
+  border: 2px solid rgb(104, 104, 104);
+}
+
+/* Make same properties to different classes for scalable*/
+.container-input-title,
+.container-input-content {
+  padding: 5px 10px;
+}
+
+.input-title,
+.input-content {
+  width: 100%;
+}
+
+.input-content {
+  height: 80%;
+  resize: none;
+}
+
+.btns-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  column-gap: 20px;
+}
+
+.btn-cancel,
+.btn-save {
+  width: 100px;
+  height: 45%;
+  padding: 4px;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* * {
+  outline: 1px solid #000;
+} */

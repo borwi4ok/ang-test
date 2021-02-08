@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div>
+    <button class="btn-back blue" routerLink="/">Назад</button>
+  </div>
+  <div class="record-title-container">
+    <p class="record-title">Запись "{{ title }} записи"</p>
+  </div>
+  <div class="input-title-change-container">
+    <input
+      class="input-title-change"
+      placeholder="Title записи"
+      (input)="changeTitle($event)"
+      [value]="title"
+    />
+  </div>
+  <div class="input-content-change-container">
+    <textarea
+      class="input-content-change"
+      placeholder="Контент записи"
+      (input)="changeContent($event)"
+      [value]="content"
+      >{{ content }}</textarea
+    >
+  </div>
+  <div class="btns-container">
+    <button class="btn-del red" (click)="clearFields()">Удалить</button>
+    <button class="btn-save blue" (click)="saveData()">Сохранить</button>
+  </div>
+</div>

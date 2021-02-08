@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="title-container">
+    <h2 class="title">Блог</h2>
+  </div>
+  <div class="cards">
+    <app-card
+      *ngFor="let card of cards; let id = index"
+      [card]="card"
+      [id]="id"
+    ></app-card>
+  </div>
+  <div class="btn-container">
+    <button class="btn-add-card blue" (click)="showModalWindow()">
+      + Добавить
+    </button>
+  </div>
+  <div *ngIf="toggleModalWindow" class="modal-window-wrapper">
+    <app-modal-window
+      (cancelAddCard)="cancelAddCard()"
+      [cards]="cards"
+    ></app-modal-window>
+    <div class="modal-window__cross" (click)="showModalWindow()">
+      <img src="../assets/сross.svg" />
+    </div>
+  </div>
+</div>

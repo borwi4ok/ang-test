@@ -1,0 +1,26 @@
+<div class="modal-window-pos">
+  <div class class="modal-window">
+    <div class="input-title-container">
+      <input
+        class="input-title"
+        placeholder="Title"
+        type="text"
+        (input)="inputTitleHandler($event)"
+      />
+    </div>
+    <div class="input-content-container">
+      <textarea
+        class="input-content"
+        placeholder="Content"
+        type="text"
+        (input)="inputContentHandler($event)"
+      ></textarea>
+    </div>
+    <div class="btns-container">
+      <button class="btn-cancel blue" (click)="cancelAddingCard(false)">
+        Отмена
+      </button>
+      <button class="btn-save blue" (click)="addCard()">Сохранить</button>
+    </div>
+  </div>
+</div>
